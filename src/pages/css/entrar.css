@@ -1,3 +1,120 @@
-h1{
-    color: violet;
+body {
+    background-color: pink;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    margin-right: 8%;
+    
+    
 }
+
+.container-entrar {
+    background-color: white;
+    width: 510px;
+    height: 510px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    
+}
+
+
+h1{
+    font-family: helvetica, sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: -.0024em;
+    margin: 0 0 20px;
+    line-height: 50px;
+    color: #414143;
+    padding-top: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+    justify-content: center;
+    display: flex;
+}
+
+
+
+.h2-login{
+    font-family: helvetica, sans-serif;
+    font-weight: 400;
+    color: #717171; 
+    
+}
+
+.btn-facebook{
+    height: 50px;
+    border-radius: 5px;
+    background: #4065b4;
+    color: #fff;
+    border: 0px solid black;
+    width: 400px;
+    margin-bottom: 10px;
+    font-size: 16px;
+
+}
+
+
+
+.btn-google{
+    height: 50px;
+    border-radius: 5px;
+    background: white;
+    color: black;
+    border: 1px solid rgb(220, 220, 220);
+    width: 390px;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.btn-celular{
+    height: 50px;
+    border-radius: 5px;
+    background: white;
+    color: rgb(150, 150, 150);
+    border: 1px solid rgb(220, 220, 220);
+    width: 190px;
+    margin-bottom: 0px;
+    font-weight: bold;
+   
+}
+
+.btn-celular:hover{
+    background-color: #ea1d2c;
+    color: white;
+}
+
+.btn-email{
+    height: 50px;
+    border-radius: 5px;
+    background: white;
+    color: rgb(150, 150, 150);
+    border: 1px solid rgb(220, 220, 220);
+    width: 190px;
+    font-weight: bold;
+}
+
+.btn-email:hover{
+    background-color: #ea1d2c;
+    color: white;
+}
+
+.cel-email{
+    display: flex;
+    gap: 20px;
+    
+
+}
+
+.linha{
+    width: 79%;
+    border-bottom: 1px solid rgb(220, 220, 220);
+    margin-top: 35px;
+
+}
+
