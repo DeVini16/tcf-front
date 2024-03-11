@@ -9,6 +9,8 @@ import Email from '../pages/Email';
 import FimCadastro from '../pages/FimCadastro';
 import Produtos from '../pages/Produtos';
 import Restaurantes from '../pages/Restaurantes';
+import PopUp from '../pages/PopUp';
+import Entrar from '../pages/Entrar';
 
 
 const Router = () => {
@@ -17,7 +19,7 @@ const Router = () => {
     <div className=''>
       <Routes>
             <Route
-              path="/inicio"
+              path="/"
               element={<Inicio/>}
             />
             <Route
@@ -41,12 +43,16 @@ const Router = () => {
               element={<Email/>}
             />
             <Route
+              path="/entrar"
+              element={<Entrar/>}
+            />
+            <Route
               path="/fimCadastro"
               element={<FimCadastro />}
             />
             <Route
               path="/popupEndereco"
-              element={<PopupEndereco />}
+              element={<PopUp />}
             />
             <Route
               path="/produtos"
