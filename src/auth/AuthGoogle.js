@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import GoogleLogin from 'react-google-login'
 import { useNavigate } from 'react-router-dom'
 
@@ -19,17 +19,19 @@ const AuthGoogle = () => {
         setEmail(email);
         setGoogleId(googleId);
         setIsLogged(true);
-
-        if (isLogged === false){
-            console.log('HOUVE UM ERROR')
-        }
-        return navigator('/celular')
     }
 
 
     const failedGoogle = (error) => {
-        console.error(error.message)
+        console.log("Failed to login!", error)
     }
+
+    useEffect(() => {
+        if (isLogged) {
+            navigator('/celular')
+        }
+    }, [isLogged, navigator])
+
   return (
     <div className='container'>
         <GoogleLogin
@@ -37,6 +39,7 @@ const AuthGoogle = () => {
             buttonText='Fazer login com o Google'
             onSuccess={responseGoogle}
             onFailure={failedGoogle}
+            cookiePolicy={'single_host_origin'}
         />
     </div>
   )
