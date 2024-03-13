@@ -19,27 +19,19 @@ const Entrar = () => {
   }, [])
 
   return (
-    <div>
-      <div className='container'>
-        <form action="">
+    <body className='container'>
           <div className='container-entrar'>
             <h1 className='h1-login'>Falta pouco para matar sua fome!</h1>
             <h2 className='h2-login'>Como deseja continuar?</h2>
-
             <div className='btn-facebook'><AuthFacebook/></div>
-            <div className='btn-google'>
-    <AuthGoogle/>
-</div>
-
+            <div><AuthGoogle/></div>
             <div className='cel-email'>
               <button className='btn-celular' onClick={() => navigator('/celular')}>Celular</button>
               <button className='btn-email' onClick={() => navigator('/email')}>E-mail</button>
             </div>
             <div className='linha'></div>
           </div>
-        </form>
-      </div>
-    </div>
+    </body>
   )
 }
 

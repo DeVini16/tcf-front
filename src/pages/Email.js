@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './css/email.css';
 
 const Email = () => {
   // State para armazenar o valor do e-mail
@@ -31,10 +32,14 @@ const Email = () => {
   };
 
   return (
-    <div className="email-container">
+    <html className='image_email'>
+      <body>
+    <div className='container-email'>
       {!submitted ? (
         <form onSubmit={handleSubmit}>
-          <label htmlFor="email">Informe o seu e-mail para continuar</label>
+          <label className='font-email' htmlFor="email">Informe o seu e-mail para continuar</label>
+          <br></br>
+          <br></br>
           <input
             type="email"
             id="email"
@@ -47,11 +52,15 @@ const Email = () => {
             required
           />
           {!emailValid && <p style={{ color: 'red' }}>E-mail Inválido</p>}
-          <button type="submit">Continuar</button>
+          <br></br><br>
+          </br>
+          <button className = "button-email" type="submit">Continuar</button>
         </form>
       ) : (
         <form onSubmit={handleSubmit}>
-          <p>Digite o código de 6 dígitos que enviamos para {email}</p>
+          <p style={{fontFamily:"revert", fontSize: '18px'}}>Digite o código de 6 dígitos que enviamos para {email}</p>
+          <br>
+          </br>
           <div className="code-input">
             <input
               type="text"
@@ -66,11 +75,16 @@ const Email = () => {
               ))}
             </div>
           </div>
-          <button type="submit">Continuar</button>
-          <p>Não recebi meu código</p>
+          <br></br>
+          <button className ="button-email" type="submit">Continuar</button>
+          <br></br>
+          <br></br>
+          <button className ="button-email2">Não recebi meu código</button>
         </form>
       )}
     </div>
+    </body>
+    </html>
   );
 };
 

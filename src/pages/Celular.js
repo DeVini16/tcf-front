@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './css/cel.css'
 
 const Celular = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -51,9 +52,11 @@ const Celular = () => {
   };
 
   return (
-    <div>
+    <html className='image_back'>
+      <body>
+    <div className='container-cel'>
       {step === 1 && (
-        <div>
+        <div className='font-cel'>
           <p>Informe o número do seu celular para continuar</p>
           <select value={countryCode} onChange={handleCountryCodeChange}>
             <option value="+55">+55 (Brasil)</option>
@@ -67,13 +70,16 @@ const Celular = () => {
             style={{ borderColor: isPhoneNumberValid ? '' : 'red' }}
           />
           {!isPhoneNumberValid && <p style={{ color: 'red' }}>Número de celular inválido</p>}
-          <button onClick={handleSendCode} disabled={!isPhoneNumberValid}>Enviar</button>
+          <br></br>
+          <button className='button-send' onClick={handleSendCode} disabled={!isPhoneNumberValid}>Enviar</button>
         </div>
       )}
 
       {step === 2 && (
         <div>
-          <p>Digite o código de 6 dígitos que enviamos por SMS para o {phoneNumber}</p>
+          <p>Digite o código de 6 dígitos que enviamos por SMS para o <br>
+          </br>{phoneNumber}</p>
+          <br></br>
           <input
             type="text"
             maxLength="1"
@@ -110,8 +116,12 @@ const Celular = () => {
             value={code[5] || ''}
             onChange={handleCodeChange}
           />
-          <button onClick={handleVerifyCode}>Continuar</button>
-          <button>Não recebi meu código</button>
+          <br></br>
+          <br></br>
+          <button className ='confirm-button-cel' onClick={handleVerifyCode}>Continuar</button>
+          <br></br>
+          <br></br>
+          <button className ='button-forget'>Não recebi meu código</button>
         </div>
       )}
 
@@ -121,6 +131,8 @@ const Celular = () => {
         </div>
       )}
     </div>
+    </body>
+    </html>
   );
 };
 
