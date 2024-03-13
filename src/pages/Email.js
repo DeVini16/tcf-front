@@ -1,9 +1,77 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const Email = () => {
-  return (
-    <div>Email</div>
-  )
-}
+  // State para armazenar o valor do e-mail
+  const [email, setEmail] = useState('');
+  // State para armazenar o valor do código
+  const [code, setCode] = useState('');
+  // State para verificar se o formulário foi enviado
+  const [submitted, setSubmitted] = useState(false);
+  // State para verificar se o e-mail é válido
+  const [emailValid, setEmailValid] = useState(true);
 
-export default Email
+  // Função para envio do formulário
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Verifica se o e-mail é válido
+    if (!isValidEmail(email)) {
+      setEmailValid(false);
+      return;
+    }
+    // lógica para enviar o código
+    console.log('Código submetido:', code);
+    setSubmitted(true);
+  };
+
+  // Função para validar o formato do e-mail
+  const isValidEmail = (email) => {
+    // validação do formato do e-mail
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
+  return (
+    <div className="email-container">
+      {!submitted ? (
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="email">Informe o seu e-mail para continuar</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              // Ao modificar o e-mail, redefine o status de validade
+              setEmailValid(true);
+            }}
+            required
+          />
+          {!emailValid && <p style={{ color: 'red' }}>E-mail Inválido</p>}
+          <button type="submit">Continuar</button>
+        </form>
+      ) : (
+        <form onSubmit={handleSubmit}>
+          <p>Digite o código de 6 dígitos que enviamos para {email}</p>
+          <div className="code-input">
+            <input
+              type="text"
+              maxLength={6}
+              value={code}
+              onChange={(e) => setCode(e.target.value)}
+              required
+            />
+            <div className="fake-input">
+              {[0, 0, 0, 0, 0, 0].map((_, index) => (
+                <span key={index}>{code[index] || ''}</span>
+              ))}
+            </div>
+          </div>
+          <button type="submit">Continuar</button>
+          <p>Não recebi meu código</p>
+        </form>
+      )}
+    </div>
+  );
+};
+
+export default Email;

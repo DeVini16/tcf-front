@@ -12,9 +12,9 @@ body {
 
 .container-entrar {
     background-color: white;
-    width: 510px;
-    height: 510px;
-    border-radius: 8px;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -47,29 +47,43 @@ h1{
     
 }
 
-.btn-facebook{
+
+.btn-facebook {
     height: 50px;
     border-radius: 5px;
     background: #4065b4;
     color: #fff;
-    border: 0px solid black;
+    border: none;
     width: 400px;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
+    margin-right: 10px; 
     font-size: 16px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-
-
-.btn-google{
+.btn-google {
     height: 50px;
     border-radius: 5px;
-    background: white;
-    color: black;
-    border: 1px solid rgb(220, 220, 220);
-    width: 390px;
-    margin-bottom: 30px;
+    margin-bottom: 1px;
+    margin-right: 5px; 
     font-size: 16px;
+    width: 400px; 
+    align-items: center;
+    justify-content: center;
+    display: contents;
+}
+
+.btn-google-custom {
+    height: 50px;
+    border: 1px solid rgb(220, 220, 220);
+    width: 400px; 
+    margin-bottom: 1px;
+    margin-right: 10px; 
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-celular{

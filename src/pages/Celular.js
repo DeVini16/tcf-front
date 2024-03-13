@@ -1,9 +1,127 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const Celular = () => {
-  return (
-    <div>Celular</div>
-  )
-}
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [code, setCode] = useState('');
+  const [step, setStep] = useState(1);
+  const [countryCode, setCountryCode] = useState('+55');
+  const [isPhoneNumberValid, setIsPhoneNumberValid] = useState(false);
 
-export default Celular
+  const handlePhoneNumberChange = (event) => {
+    const inputPhoneNumber = event.target.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+    const formattedPhoneNumber = formatPhoneNumber(inputPhoneNumber);
+    setPhoneNumber(formattedPhoneNumber);
+    setIsPhoneNumberValid(formattedPhoneNumber.length === 15); // formatação: (XX) XXXXX-XXXX
+  };
+
+  const formatPhoneNumber = (phoneNumber) => {
+    const cleaned = ('' + phoneNumber).replace(/\D/g, '');
+    const match = cleaned.match(/^(\d{2})(\d{5})(\d{4})$/);
+    if (match) {
+      return '(' + match[1] + ') ' + match[2] + '-' + match[3];
+    }
+    return phoneNumber;
+  };
+
+  const handleCodeChange = (event) => {
+    setCode(event.target.value);
+  };
+
+  const handleSendCode = () => {
+    if (isPhoneNumberValid) {
+      // Lógica para enviar o código por SMS
+      // Chama uma função que simula o envio do código
+      console.log('Enviando código por SMS para:', phoneNumber);
+      setStep(2);
+    } else {
+      alert('Por favor, insira um número de telefone válido.');
+    }
+  };
+
+  const handleVerifyCode = () => {
+    // Adiciona a lógica para verificar o código
+    // Compara o código inserido com um código pré-definido
+    console.log('Verificando código:', code);
+    // Verifica se o código está correto
+    setStep(3);
+  };
+
+  const handleCountryCodeChange = (event) => {
+    setCountryCode(event.target.value);
+  };
+
+  return (
+    <div>
+      {step === 1 && (
+        <div>
+          <p>Informe o número do seu celular para continuar</p>
+          <select value={countryCode} onChange={handleCountryCodeChange}>
+            <option value="+55">+55 (Brasil)</option>
+            {/* Adicionar outras opções de países*/}
+          </select>
+          <input
+            type="tel"
+            placeholder="(XX) XXXXX-XXXX"
+            value={phoneNumber}
+            onChange={handlePhoneNumberChange}
+            style={{ borderColor: isPhoneNumberValid ? '' : 'red' }}
+          />
+          {!isPhoneNumberValid && <p style={{ color: 'red' }}>Número de celular inválido</p>}
+          <button onClick={handleSendCode} disabled={!isPhoneNumberValid}>Enviar</button>
+        </div>
+      )}
+
+      {step === 2 && (
+        <div>
+          <p>Digite o código de 6 dígitos que enviamos por SMS para o {phoneNumber}</p>
+          <input
+            type="text"
+            maxLength="1"
+            value={code[0] || ''}
+            onChange={handleCodeChange}
+          />
+          <input
+            type="text"
+            maxLength="1"
+            value={code[1] || ''}
+            onChange={handleCodeChange}
+          />
+          <input
+            type="text"
+            maxLength="1"
+            value={code[2] || ''}
+            onChange={handleCodeChange}
+          />
+          <input
+            type="text"
+            maxLength="1"
+            value={code[3] || ''}
+            onChange={handleCodeChange}
+          />
+          <input
+            type="text"
+            maxLength="1"
+            value={code[4] || ''}
+            onChange={handleCodeChange}
+          />
+          <input
+            type="text"
+            maxLength="1"
+            value={code[5] || ''}
+            onChange={handleCodeChange}
+          />
+          <button onClick={handleVerifyCode}>Continuar</button>
+          <button>Não recebi meu código</button>
+        </div>
+      )}
+
+      {step === 3 && (
+        <div>
+          <p>Parabéns! Você foi verificado.</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Celular;

@@ -27,7 +27,9 @@ const Entrar = () => {
             <h2 className='h2-login'>Como deseja continuar?</h2>
 
             <div className='btn-facebook'><AuthFacebook/></div>
-            <div className='btn-google'><AuthGoogle/></div>
+            <div className='btn-google'>
+    <AuthGoogle/>
+</div>
 
             <div className='cel-email'>
               <button className='btn-celular' onClick={() => navigator('/celular')}>Celular</button>
@@ -42,7 +44,3 @@ const Entrar = () => {
 }
 
 export default Entrar
-
-
-
-
