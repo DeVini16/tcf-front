@@ -13,14 +13,14 @@
 
 .container-cel {
     background-color: rgb(243, 243, 243);
-    width: 417px;
-    height: 300px;
+    width: 345px;
+    height: 295px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-right: 854px;
+    margin-right: 737px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     
 }

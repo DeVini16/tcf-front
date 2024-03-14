@@ -18,7 +18,7 @@ const Inicio = () => {
       </div>
       </div>
       <div className="container-middle">
-        <h2>Faça o seu mercado</h2>
+        <h2>O seu mercado favorito</h2>
         <p className='font-text'>Entregamos tudo o que precisa na porta da sua casa, de hortifruti a itens de limpeza</p>
         <form>
         <input className ="search"placeholder='Em qual endereço você está? '></input>

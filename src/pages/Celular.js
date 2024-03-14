@@ -58,6 +58,7 @@ const Celular = () => {
       {step === 1 && (
         <div className='font-cel'>
           <p>Informe o número do seu celular para continuar</p>
+          <br></br>
           <select value={countryCode} onChange={handleCountryCodeChange}>
             <option value="+55">+55 (Brasil)</option>
             {/* Adicionar outras opções de países*/}
@@ -69,6 +70,8 @@ const Celular = () => {
             onChange={handlePhoneNumberChange}
             style={{ borderColor: isPhoneNumberValid ? '' : 'red' }}
           />
+          <br></br>
+          <br></br>
           {!isPhoneNumberValid && <p style={{ color: 'red' }}>Número de celular inválido</p>}
           <br></br>
           <button className='button-send' onClick={handleSendCode} disabled={!isPhoneNumberValid}>Enviar</button>
