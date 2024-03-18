@@ -1,8 +1,10 @@
 import React from 'react'
-
+import GeoCode from '../auth/GeoCode'
 const PopUp = () => {
   return (
-    <div>PopUp</div>
+    <div>
+      <GeoCode/>
+    </div>
   )
 }
 

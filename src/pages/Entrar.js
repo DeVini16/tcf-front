@@ -4,6 +4,7 @@ import AuthFacebook from '../auth/AuthFacebook'
 import AuthGoogle from '../auth/AuthGoogle'
 import { gapi } from 'gapi-script'
 import { useNavigate } from 'react-router-dom'
+import BgLogin from '../components/BgLogin'
 
 const Entrar = () => {
   const navigator = useNavigate()
@@ -20,6 +21,7 @@ const Entrar = () => {
 
   return (
     <div>
+      <BgLogin>
       <div className='container'>
         <form action="">
           <div className='container-entrar'>
@@ -39,6 +41,7 @@ const Entrar = () => {
           </div>
         </form>
       </div>
+      </BgLogin>
     </div>
   )
 }

@@ -51,7 +51,7 @@ const Router = () => {
               element={<FimCadastro />}
             />
             <Route
-              path="/popupEndereco"
+              path="/popup"
               element={<PopUp />}
             />
             <Route
