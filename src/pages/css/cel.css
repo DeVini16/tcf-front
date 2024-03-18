@@ -1,0 +1,61 @@
+.image_back { 
+    background-image: url(https://cdn.leonardo.ai/users/5aef295b-a2a1-4257-b57f-e7d4c39ab1ac/generations/53f9a4c9-dcc8-47fb-be02-e78311d3eab6/Default_create_a_screen_where_have_foods_to_home_screen_in_web_0.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    border-radius: 10px;
+}
+
+
+.container-cel {
+    background-color: rgb(243, 243, 243);
+    width: 345px;
+    height: 295px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 737px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    
+}
+
+.font-cel {
+    font-family: helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.button-send {
+    height: 30px;
+    border-radius: 5px;
+    background: white;
+    color: rgb(79, 121, 73);
+    border: 1px solid rgb(220, 220, 220);
+    width: 150px;
+    font-weight: bold;
+}
+
+.confirm-button-cel {
+    height: 30px;
+    border-radius: 5px;
+    background: white;
+    color: rgb(79, 121, 73);
+    border: 1px solid rgb(220, 220, 220);
+    width: 150px;
+    font-weight: bold;
+}
+
+.button-forget {
+    height: 30px;
+    border-radius: 5px;
+    background: white;
+    color: rgb(230, 48, 42);
+    border: 1px solid rgb(220, 220, 220);
+    width: 160px;
+    font-weight: bold;
+}

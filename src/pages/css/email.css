@@ -1,0 +1,51 @@
+.image_email { 
+    background-image: url(https://wallpapercave.com/wp/wp3104899.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    border-radius: 10px;
+}
+
+
+.container-email {
+    background-color: rgb(243, 243, 243);
+    width: 460px;
+    height: 360px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 550px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    
+}
+
+.button-email {
+    height: 30px;
+    border-radius: 5px;
+    background: white;
+    color: rgb(78, 109, 74);
+    border: 1px solid rgb(220, 220, 220);
+    width: 150px;
+    font-weight: bold;
+}
+
+.button-email2 {
+    height: 30px;
+    border-radius: 5px;
+    background: white;
+    color: rgb(223, 103, 103);
+    border: 1px solid rgb(220, 220, 220);
+    width: 160px;
+    font-weight: bold;
+}
+
+.font-email {
+    font-family: helvetica, sans-serif;
+    font-size: 18px;
+}

@@ -29,18 +29,16 @@ const AuthGoogle = () => {
         }
     }, [isLogged, navigator])
 
-  return (
-    <div className='container' style={{ display: 'flex', justifyContent: 'center' }}>
+    return (
         <GoogleLogin
-            clientId='169485230618-h6rne291q5iqrn5qp2l2u3oi72t2qs3j.apps.googleusercontent.com'
-            buttonText='Fazer login com o Google'
-            onSuccess={responseGoogle}
-            onFailure={failedGoogle}
-            cookiePolicy={'single_host_origin'}
-            className="btn-google-custom"
+          clientId='169485230618-h6rne291q5iqrn5qp2l2u3oi72t2qs3j.apps.googleusercontent.com'
+          buttonText='Fazer login com o Google'
+          onSuccess={responseGoogle}
+          onFailure={failedGoogle}
+          cookiePolicy={'single_host_origin'}
+          className="btn-google-custom"
         />
-    </div>
-  )
-}
+      );
+    };
 
 export default AuthGoogle

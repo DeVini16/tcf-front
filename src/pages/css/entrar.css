@@ -1,134 +1,128 @@
-body {
-    background-color: pink;
+.container {
+    background-image: url(/public/img/fundo.1.png);
+    background-position: center;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 101%;
     margin: 0;
-    margin-right: 8%;
-    
-    
-}
-
-.container-entrar {
-    background-color: white;
-    width: 500px;
-    height: 500px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    
-}
-
-
-h1{
-    font-family: helvetica, sans-serif;
-    font-size: 2.5rem;
-    letter-spacing: -.0024em;
-    margin: 0 0 20px;
-    line-height: 50px;
-    color: #414143;
-    padding-top: 20px;
-    padding-left: 80px;
-    padding-right: 80px;
-    justify-content: center;
-    display: flex;
-}
-
-
-
-.h2-login{
-    font-family: helvetica, sans-serif;
-    font-weight: 400;
-    color: #717171; 
-    
-}
-
-
-.btn-facebook {
-    height: 50px;
-    border-radius: 5px;
-    background: #4065b4;
-    color: #fff;
-    border: none;
-    width: 400px;
-    margin-bottom: 1px;
-    margin-right: 10px; 
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.btn-google {
-    height: 50px;
-    border-radius: 5px;
-    margin-bottom: 1px;
-    margin-right: 5px; 
-    font-size: 16px;
-    width: 400px; 
-    align-items: center;
-    justify-content: center;
-    display: contents;
-}
-
-.btn-google-custom {
-    height: 50px;
-    border: 1px solid rgb(220, 220, 220);
-    width: 400px; 
-    margin-bottom: 1px;
-    margin-right: 10px; 
-    justify-content: center;
-    align-items: center;
-}
-
-.btn-celular{
-    height: 50px;
-    border-radius: 5px;
-    background: white;
-    color: rgb(150, 150, 150);
-    border: 1px solid rgb(220, 220, 220);
-    width: 190px;
-    margin-bottom: 0px;
-    font-weight: bold;
-   
-}
-
-.btn-celular:hover{
-    background-color: #ea1d2c;
-    color: white;
-}
-
-.btn-email{
-    height: 50px;
-    border-radius: 5px;
-    background: white;
-    color: rgb(150, 150, 150);
-    border: 1px solid rgb(220, 220, 220);
-    width: 190px;
-    font-weight: bold;
-}
-
-.btn-email:hover{
-    background-color: #ea1d2c;
-    color: white;
-}
-
-.cel-email{
-    display: flex;
-    gap: 20px;
-    
-
-}
-
-.linha{
-    width: 79%;
-    border-bottom: 1px solid rgb(220, 220, 220);
-    margin-top: 35px;
-
-}
-
+  }
+  .icon {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      border-radius: 5px;
+  }
+  
+  .container-entrar {
+      background-color: white;
+      width: 500px;
+      height: 500px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-right: 15%;
+      align-items: center;
+      box-shadow: 0 0 10px rgba(117, 117, 117, 0.5);
+      
+  }
+  
+  
+  h1{
+      font-family: helvetica, sans-serif;
+      font-size: 2.5rem;
+      letter-spacing: -.0024em;
+      margin: 0 0 20px;
+      line-height: 50px;
+      color: #414143;
+      padding-top: 20px;
+      padding-left: 80px;
+      padding-right: 80px;
+      justify-content: center;
+      display: flex;
+  }
+  
+  
+  
+  .h2-login{
+      font-family: helvetica, sans-serif;
+      font-weight: 400;
+      color: #717171; 
+      
+  }
+  
+  
+  .btn-facebook {
+      height: 50px;
+      background: #4065b4;
+      color: #fff;
+      border: none;
+      width: 400px;
+      margin: 12px; 
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+  }
+  
+  .btn-google-custom {
+      height: 47px;
+      margin: 1px;
+      margin-bottom: 15px;
+      border-radius: 5px; /* Adicione esta linha para arredondar o botão */
+      width: 400px; 
+      justify-content: center;
+      align-items: center;
+    }
+  
+  .btn-celular{
+      height: 50px;
+      border-radius: 5px;
+      background: white;
+      color: rgb(150, 150, 150);
+      border: 1px solid rgb(220, 220, 220);
+      width: 190px;
+      margin-bottom: 0px;
+      font-weight: bold;
+     
+  }
+  
+  .btn-celular:hover{
+      background-color: #ea1d2c;
+      color: white;
+  }
+  
+  .btn-email{
+      height: 50px;
+      border-radius: 5px;
+      background: white;
+      color: rgb(150, 150, 150);
+      border: 1px solid rgb(220, 220, 220);
+      width: 190px;
+      font-weight: bold;
+  }
+  
+  .btn-email:hover{
+      background-color: #ea1d2c;
+      color: white;
+  }
+  
+  .cel-email{
+      display: flex;
+      gap: 20px;
+      
+  
+  }
+  
+  .linha{
+      width: 79%;
+      border-bottom: 1px solid rgb(220, 220, 220);
+      margin: 20px;
+  
+  }
+  
+  
