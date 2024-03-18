@@ -1,3 +1,4 @@
+
 *{
   margin: 0;
   padding: 0;
@@ -5,7 +6,7 @@
  
  .container-home {
     background-color: rgb(255, 255, 255);
-    height: 150px;
+    height: 150px;  
   }
 
   .title {
@@ -102,4 +103,3 @@ margin-top: 20px;
   .button-ifood:hover {
     background-color: #e10000;
   }
-  
