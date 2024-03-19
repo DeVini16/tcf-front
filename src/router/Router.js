@@ -47,7 +47,7 @@ const Router = () => {
               element={<Entrar/>}
             />
             <Route
-              path="/fimCadastro"
+              path="/fimcadastro"
               element={<FimCadastro />}
             />
             <Route
