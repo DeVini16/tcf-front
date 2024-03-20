@@ -1,27 +1,34 @@
-import React, { useState } from 'react'
-
+import React, { useState } from 'react';
+import '../pages/css/geocode.css';
 const GeoCode = () => {
-    const [longitude, setLongitude] = useState('')
-    const [latitude, setLatitude] = useState('')
- // Aqui essa lógica faz com que o geolocation busque a latitude e longitude do usuário
-  if ('geolocation' in navigator){
-    navigator.geolocation.getCurrentPosition((position) => {
-      console.log(position)
+    const [longitude, setLongitude] = useState('');
+    const [latitude, setLatitude] = useState('');
 
-      const {coords : {latitude,longitude}} = position  
-      setLatitude(latitude)
-      setLongitude(longitude)
-      
-      }, (error)=>{console.log(error)});
-  }else{
-    console.log('ops, algo está errado aqui')
-}
-  return (
-    <div>
-      <h1>{latitude}</h1>
-      <h1>{longitude}</h1>
-    </div>
-  )
-}
+    const handleLocationButtonClick = () => {
+        if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    console.log(position);
+                    const { coords: { latitude, longitude } } = position;
+                    setLatitude(latitude);
+                    setLongitude(longitude);
+                },
+                (error) => {
+                    console.log(error);
+                }
+            );
+        } else {
+            console.log('Ops, algo está errado aqui');
+        }
+    };
 
-export default GeoCode
+    return (
+        <div className="geo-code-container">
+            <button onClick={handleLocationButtonClick}>Obter Localização</button>
+            <h3>Latitude: {latitude}</h3>
+            <h3>Longitude: {longitude}</h3>
+        </div>
+    );
+};
+
+export default GeoCode;
