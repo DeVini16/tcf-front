@@ -1,0 +1,130 @@
+.restaurantes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.header {
+  background-color: #f8f9fa;
+  padding: 1px;
+  width: 100%;
+  display: flex;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  margin-top: 55px;
+  margin-left: 170px;
+}
+
+.nav-item {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.search-bar {
+  margin-top: 50px;
+  margin-left: 120px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.search-input {
+  padding: 14px 40px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 53%;
+  transform: translateY(-50%); 
+}
+
+.search-icon img {
+  width: 18px;
+  height: auto;
+  fill: red;
+}
+
+.address-info{
+  margin-top: 40px;
+  margin-bottom: 18px;
+  margin-left: -390px;
+}
+.price-info {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-right: 40px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.address-info p {
+  margin-bottom: 5px;
+}
+
+.price-info p {
+  margin: 0; 
+}
+
+.restaurant-list {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.highlight-list,
+.store-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.category-item,
+.highlight-item,
+.store-item {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  display: inline-block; 
+}
+
+.highlight-item,
+.store-item {
+  cursor: pointer;
+}
+
+.category-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-item {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.category-item img {
+  width: 100px; 
+  height: auto; 
+  margin-right: 10px; 
+}
+
+
+

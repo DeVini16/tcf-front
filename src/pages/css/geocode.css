@@ -1,0 +1,36 @@
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+.address-form {
+  margin-bottom: 20px;
+}
+
+.address-form input[type="text"] {
+  width: calc(100% - 70px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.address-form button {
+  width: 70px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.address-list {
+  list-style: none;
+  padding: 0;
+}
+
+.address-list li {
+  margin-bottom: 10px;
+}

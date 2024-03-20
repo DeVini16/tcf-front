@@ -4,7 +4,7 @@ import Inicio from '../pages/Inicio';
 import Celular from '../pages/Celular';
 import Codigo from '../pages/Codigo';
 import CriaProduto from '../pages/CriaProduto';
-import CriaRestaurante from '../pages/CriaRestaurante';
+import CriarRestaurante from '../pages/CriarRestaurante';
 import Email from '../pages/Email';
 import FimCadastro from '../pages/FimCadastro';
 import Produtos from '../pages/Produtos';
@@ -12,9 +12,7 @@ import Restaurantes from '../pages/Restaurantes';
 import PopUp from '../pages/PopUp';
 import Entrar from '../pages/Entrar';
 
-
 const Router = () => {
-
   return (
     <div className=''>
       <Routes>
@@ -35,9 +33,9 @@ const Router = () => {
               element={<CriaProduto />}
             />
             <Route
-              path="/criaRestaurante"
-              element={<CriaRestaurante />}
-            />
+              path="/criarRestaurante"
+              element={<CriarRestaurante />}
+            /> {}
             <Route
               path="/email"
               element={<Email/>}
