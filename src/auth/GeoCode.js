@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const GeoCode = () => {
+const GeoCode = ({handleLocation}) => {
     const [longitude, setLongitude] = useState('')
     const [latitude, setLatitude] = useState('')
  // Aqui essa lógica faz com que o geolocation busque a latitude e longitude do usuário
@@ -11,6 +11,8 @@ const GeoCode = () => {
       const {coords : {latitude,longitude}} = position  
       setLatitude(latitude)
       setLongitude(longitude)
+
+      handleLocation(latitude, longitude)
       
       }, (error)=>{console.log(error)});
   }else{
@@ -18,8 +20,7 @@ const GeoCode = () => {
 }
   return (
     <div>
-      <h1>{latitude}</h1>
-      <h1>{longitude}</h1>
+
     </div>
   )
 }
