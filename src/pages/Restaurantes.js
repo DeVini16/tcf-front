@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import PopUp from './PopUp';
 
 const Restaurantes = () => {
-  return (
-    <div>Restaurantes</div>
-  )
-}
+  const [openPopUp, setOpenPopUp] = useState(false);
 
-export default Restaurantes
+  useEffect(() => {
+    setOpenPopUp(true);
+  }, []);
+
+  return (
+    <div>
+      {openPopUp && <PopUp isOpen={true} />}
+    </div>
+  );
+};
+
+export default Restaurantes;

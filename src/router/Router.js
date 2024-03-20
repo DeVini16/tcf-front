@@ -31,11 +31,11 @@ const Router = () => {
               element={<Codigo/>}
             />
             <Route
-              path="/criaProduto"
+              path="/criaproduto"
               element={<CriaProduto />}
             />
             <Route
-              path="/criaRestaurante"
+              path="/criarestaurante"
               element={<CriaRestaurante />}
             />
             <Route
