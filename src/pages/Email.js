@@ -41,11 +41,11 @@ const Email = () => {
       {!submitted ? (
         <form onSubmit={handleSubmit}>
           <label className='font-email' htmlFor="email">Informe o seu e-mail para continuar</label>
-          <br></br>
-          <br></br>
-          <input
+          
+            <input className='input'
             type="email"
             id="email"
+            placeholder='Informe o seu e-mail'
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
@@ -54,16 +54,15 @@ const Email = () => {
             }}
             required
           />
+          <br></br>
+          <br></br>
           {!emailValid && <p style={{ color: 'red' }}>E-mail Inválido</p>}
-          <br></br><br>
-          </br>
           <button className = "button-email" type="submit">Continuar</button>
+          <div></div>
         </form>
       ) : (
         <form onSubmit={handleSubmit}>
           <p style={{fontFamily:"revert", fontSize: '18px'}}>Digite o código de 6 dígitos que enviamos para {email}</p>
-          <br>
-          </br>
           <div className="code-input">
             <input
               type="text"
@@ -78,10 +77,7 @@ const Email = () => {
               ))}
             </div>
           </div>
-          <br></br>
           <button className ="button-email" type="submit">Continuar</button>
-          <br></br>
-          <br></br>
           <button className ="button-email2">Não recebi meu código</button>
         </form>
       )}
