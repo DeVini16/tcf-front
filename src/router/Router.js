@@ -29,7 +29,7 @@ const Router = () => {
               element={<Codigo/>}
             />
             <Route
-              path="/criaProduto"
+              path="/criaproduto"
               element={<CriaProduto />}
             />
             <Route
