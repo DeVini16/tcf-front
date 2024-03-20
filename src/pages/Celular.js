@@ -54,6 +54,9 @@ const Celular = () => {
   return (
     <html className='image_back'>
       <body>
+      <div>
+        <img className='icon' src='\img\logo-red.jpg'></img>
+      </div>
     <div className='container-cel'>
       {step === 1 && (
         <div className='font-cel'>
