@@ -4,7 +4,6 @@ import AuthFacebook from '../auth/AuthFacebook'
 import AuthGoogle from '../auth/AuthGoogle'
 import { gapi } from 'gapi-script'
 import { useNavigate } from 'react-router-dom'
-import BgLogin from '../components/BgLogin'
 
 const Entrar = () => {
   const navigator = useNavigate()
@@ -22,7 +21,7 @@ const Entrar = () => {
   return (
     <body className='container'>    
       <div>
-        <img className='icon' src='\img\logo-red.jpg'></img>
+        <img alt='Logo' className='icon' src='\img\logo-red.jpg'></img>
       </div>
       <div className='container-entrar'>
         <h1 className='h1-login'>Falta pouco para matar sua fome!</h1>

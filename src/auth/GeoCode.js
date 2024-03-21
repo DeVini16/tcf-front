@@ -12,15 +12,16 @@ const GeoCode = () => {
                     const { coords: { latitude, longitude } } = position;
                     setLatitude(latitude);
                     setLongitude(longitude);
-                },
+                }, 
                 (error) => {
                     console.log(error);
-                }
+                },
+                { enableHighAccuracy: true, maximumAge: 30000, timeout: 50000 }
             );
         } else {
-            console.log('Ops, algo está errado aqui');
+            console.log("Geolocation is not supported by this browser.");
         }
-    };
+    }
 
     return (
         <div className="geo-code-container">

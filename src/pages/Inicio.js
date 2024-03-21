@@ -11,7 +11,7 @@ const Inicio = () => {
     <br></br>
     <br></br>
     <div className="headliner">
-    <img className='icon' src='\img\logo-red.jpg'></img>
+    <img alt='Logo' className='icon' src='\img\logo-red.jpg'></img>
     <h1 className='title'>ToCom.Fome</h1>
         <Link to="/entrar" className="button-ifood" style={{height: '20px'}}>Criar Conta</Link>
         <Link to="/entrar" className="button-ifood"style={{height: '20px'}}>Entrar</Link>

@@ -34,7 +34,7 @@ const Email = () => {
   return (
     <html className='image_email'>
       <div>
-        <img className='icon' src='\img\logo-red.jpg'></img>
+        <img alt='Logo' className='icon' src='\img\logo-red.jpg'></img>
       </div>
       <body>
     <div className='container-email'>

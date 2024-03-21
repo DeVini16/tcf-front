@@ -98,27 +98,24 @@ const handleSearchAddress = (e) => {
             <li className="nav-item"><a href="shopping">Shopping</a></li>
           </ul>
         </div>
+
         <div className="search-bar">
           <input type="text" className="search-input" placeholder="Busque por item ou loja" />
           <div className="search-icon">
             <img src="https://icones.pro/wp-content/uploads/2021/06/icone-loupe-rouge.png" alt="Lupa" />
           </div>
         </div>
+
         <div className="header-content">
           <div className="user-profile" onClick={handleUserProfileClick}>
             <img src="https://static.vecteezy.com/system/resources/previews/008/506/404/original/contact-person-red-icon-free-png.png" alt="Perfil" />
           </div>
-          {userLocation && (
-            <div className="address-info">
-              <p>Latitude: {userLocation.latitude.toFixed(6)}</p>
-              <p>Longitude: {userLocation.longitude.toFixed(6)}</p>
-            </div>
-          )}
           <div className="price-info">
             <p>R$ 0,00</p>
             <p>0 itens</p>
           </div>
         </div>
+
       </header>
       <div className="main">
         <div className="restaurant-list">
