@@ -1,43 +1,58 @@
 .image_back { 
-    background-image: url(https://cdn.leonardo.ai/users/5aef295b-a2a1-4257-b57f-e7d4c39ab1ac/generations/53f9a4c9-dcc8-47fb-be02-e78311d3eab6/Default_create_a_screen_where_have_foods_to_home_screen_in_web_0.jpg);
-    background-repeat: no-repeat;
+    background-image: url(/public/img/fundo.1.png);
     background-position: center;
-    background-size: cover;
-    display: flex;
-    justify-content: flex-end;
+    background-repeat: no-repeat;
+    justify-content:flex-start;
     align-items: center;
+    display: flex;
     height: 100vh;
-    border-radius: 10px;
+    
+    background-size: 102%;
+    
+    
 }
 
-
 .container-cel {
-    background-color: rgb(243, 243, 243);
-    width: 345px;
-    height: 295px;
+    background-color: white;
+    width: 500px;
+    height: 350px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-right: 737px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    
+    margin-left: 150%;
+    box-shadow:  0 0 10px rgba(117, 117, 117, 0.5);
+    position: relative;
     
 }
 
 .font-cel {
     font-family: helvetica, sans-serif;
-    font-size: 16px;
+    padding-bottom: 30 px;
+    font-size: 18px;
+
+}
+.btn-numero{
+    border-radius: 5px;
+    display: flex;
+    width: 290px;
+    
+    
 }
 
+.btn-br{
+    display: flex;
+    border-radius: 10px;
+}
 .button-send {
-    height: 30px;
+    height: 50px;
     border-radius: 5px;
-    background: white;
-    color: rgb(79, 121, 73);
+    color: white;
     border: 1px solid rgb(220, 220, 220);
-    width: 150px;
+    width: 400px;
     font-weight: bold;
+    background: #ea1d2c;
 }
 
 .confirm-button-cel {
@@ -58,4 +73,16 @@
     border: 1px solid rgb(220, 220, 220);
     width: 160px;
     font-weight: bold;
+}
+
+.form-cel{
+    height: 50px;
+    padding-top: 30px;
+    gap: 10px;
+    display: flex;
+    
+}
+
+.button-send:hover{
+    background: #f37a83 
 }

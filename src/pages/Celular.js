@@ -54,24 +54,27 @@ const Celular = () => {
   return (
     <html className='image_back'>
       <body>
+      <div>
+        <img className='icon' src='\img\logo-red.jpg'></img>
+      </div>
     <div className='container-cel'>
       {step === 1 && (
         <div className='font-cel'>
           <p>Informe o número do seu celular para continuar</p>
-          <br></br>
-          <select value={countryCode} onChange={handleCountryCodeChange}>
-            <option value="+55">+55 (Brasil)</option>
-            {/* Adicionar outras opções de países*/}
-          </select>
-          <input
-            type="tel"
-            placeholder="(XX) XXXXX-XXXX"
+          <div className='form-cel'>
+            <select value={countryCode} onChange={handleCountryCodeChange}>
+              <option className='btn-br' value="+55">+55 (Brasil)</option>
+              {/* Adicionar outras opções de países*/}
+            </select>
+            <input className='btn-numero'
+            type="tel" placeholder="(XX) XXXXX-XXXX"
             value={phoneNumber}
             onChange={handlePhoneNumberChange}
             style={{ borderColor: isPhoneNumberValid ? '' : 'red' }}
           />
+          </div>
           <br></br>
-          <br></br>
+          
           {!isPhoneNumberValid && <p style={{ color: 'red' }}>Número de celular inválido</p>}
           <br></br>
           <button className='button-send' onClick={handleSendCode} disabled={!isPhoneNumberValid}>Enviar</button>
@@ -82,7 +85,6 @@ const Celular = () => {
         <div>
           <p>Digite o código de 6 dígitos que enviamos por SMS para o <br>
           </br>{phoneNumber}</p>
-          <br></br>
           <input
             type="text"
             maxLength="1"
@@ -119,11 +121,7 @@ const Celular = () => {
             value={code[5] || ''}
             onChange={handleCodeChange}
           />
-          <br></br>
-          <br></br>
           <button className ='confirm-button-cel' onClick={handleVerifyCode}>Continuar</button>
-          <br></br>
-          <br></br>
           <button className ='button-forget'>Não recebi meu código</button>
         </div>
       )}
