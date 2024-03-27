@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 // Função para validar CPF
 function validarCPF(cpf) {
-  cpf = cpf.replace(/[^\d]/g, '');
+  cpf = cpf.replace(/[^\d]/g, "");
   if (cpf.length !== 11 || /^(.)\1{10}$/.test(cpf)) return false;
 
   let soma = 0;
@@ -21,58 +21,57 @@ function validarCPF(cpf) {
 }
 
 const FimCadastro = () => {
-  const [nomeCompleto, setNomeCompleto] = useState('');
-  const [erroNome, setErroNome] = useState('');
+  const [nomeCompleto, setNomeCompleto] = useState("");
+  const [erroNome, setErroNome] = useState("");
 
-  const [cpf, setCpf] = useState('');
-  const [erroCpf, setErroCpf] = useState('');
+  const [cpf, setCpf] = useState("");
+  const [erroCpf, setErroCpf] = useState("");
 
   const handleCadastro = () => {
     if (!nomeCompleto.trim()) {
-      setErroNome('Nome completo é obrigatório');
+      setErroNome("Nome completo é obrigatório");
       return;
     }
 
     if (!cpf.trim()) {
-      setErroCpf('CPF é obrigatório');
+      setErroCpf("CPF é obrigatório");
       return;
     }
 
     if (!validarCPF(cpf)) {
-      setErroCpf('CPF inválido');
+      setErroCpf("CPF inválido");
       return;
     }
-    
   };
 
   const handleNameChange = (e) => {
-    const value = e.target.value.replace(/[0-9]/g, '');
+    const value = e.target.value.replace(/[0-9]/g, "");
     setNomeCompleto(value);
-    setErroNome('');
+    setErroNome("");
   };
 
   const handleCpfChange = (e) => {
-    let value = e.target.value.replace(/\D/g, '');
+    let value = e.target.value.replace(/\D/g, "");
     if (value.length > 11) {
       value = value.substr(0, 11);
     }
 
-    value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+    value = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
     setCpf(value);
-    setErroCpf('');
+    setErroCpf("");
   };
 
   return (
     <div>
-      <div className='container-form'>
-        <h3 className='h3-form'>Cadastrar</h3>
-          
-        <div className='campo-nome'>
+      <div className="container-form">
+        <h3 className="h3-form">Cadastrar</h3>
+
+        <div className="campo-nome">
           <input
             type="text"
             name="NomeCompleto"
             id="NomeCompleto"
-            placeholder='Nome Completo'
+            placeholder="Nome Completo"
             value={nomeCompleto}
             onChange={handleNameChange}
           />
@@ -80,32 +79,33 @@ const FimCadastro = () => {
         </div>
 
         <div>
-          <input 
+          <input
             type="text"
-            name='cpf'
-            id='cpf'
-            placeholder='CPF'
+            name="cpf"
+            id="cpf"
+            placeholder="CPF"
             value={cpf}
             onChange={handleCpfChange}
           />
           {erroCpf && <span className="erro-msg">{erroCpf}</span>}
         </div>
 
-        <div className='form-email'>
+        <div className="form-email">
           <span>Email</span>
           <span>{}</span>
         </div>
 
-        <p>Concordo com os &nbsp;
-          <button>Termos de uso</button>&nbsp;
-          e as &nbsp;
+        <p>
+          Concordo com os &nbsp;
+          <button>Termos de uso</button>&nbsp; e as &nbsp;
           <button>Política de privacidade</button>
         </p>
 
         <button onClick={handleCadastro}>Cadastrar</button>
 
-        <div>Já tem conta? <a href="/entrar">Entrar</a></div>
-
+        <div>
+          Já tem conta? <a href="/entrar">Entrar</a>
+        </div>
       </div>
     </div>
   );
