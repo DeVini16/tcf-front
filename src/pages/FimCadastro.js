@@ -107,7 +107,7 @@ const FimCadastro = () => {
         <button className="btn-cadastrar" onClick={handleCadastro}>Cadastrar</button>
         
         <div>
-          Já tem conta? <a className="e" href="/entrar">Entrar</a>
+          <h4>Já tem conta? <a className="e" href="/entrar">Entrar</a></h4>
         </div>
       </div>
     </div>

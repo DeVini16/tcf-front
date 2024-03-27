@@ -60,10 +60,12 @@
 .form-email{
     margin: 10px;
     padding-right: 360px;
+    color: rgb(116, 114, 114);
 }
 
 .paragrafo{
     margin: 10px ;
+    color: rgb(116, 114, 114);
 }
 
 .t{
@@ -102,4 +104,8 @@
 .e{
     color: #ea1d2c;
     font-weight: bold;
+}
+
+h4{
+    color: #414143;
 }
