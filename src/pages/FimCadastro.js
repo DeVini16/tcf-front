@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import './css/fimcadastro.css'
 // Função para validar CPF
 function validarCPF(cpf) {
   cpf = cpf.replace(/[^\d]/g, "");
@@ -62,7 +62,10 @@ const FimCadastro = () => {
   };
 
   return (
-    <div>
+    <div className="container">
+      <div>
+        <img alt='Logo' className='icon' src='\img\logo-red.jpg'></img>
+      </div>
       <div className="container-form">
         <h3 className="h3-form">Cadastrar</h3>
 
@@ -78,7 +81,7 @@ const FimCadastro = () => {
           {erroNome && <span className="erro-msg">{erroNome}</span>}
         </div>
 
-        <div>
+        <div className="campo-cpf">
           <input
             type="text"
             name="cpf"
@@ -95,16 +98,16 @@ const FimCadastro = () => {
           <span>{}</span>
         </div>
 
-        <p>
+        <p className="paragrafo">
           Concordo com os &nbsp;
-          <button>Termos de uso</button>&nbsp; e as &nbsp;
-          <button>Política de privacidade</button>
+          <button className="t">Termos de uso</button>&nbsp; e as &nbsp;
+          <button className="p">Política de privacidade</button>
         </p>
-
-        <button onClick={handleCadastro}>Cadastrar</button>
-
+        
+        <button className="btn-cadastrar" onClick={handleCadastro}>Cadastrar</button>
+        
         <div>
-          Já tem conta? <a href="/entrar">Entrar</a>
+          Já tem conta? <a className="e" href="/entrar">Entrar</a>
         </div>
       </div>
     </div>
